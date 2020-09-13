@@ -1,0 +1,12 @@
+{
+  "name": "spotify-dataset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:IncognitoJam/spotify-dataset.git",
+  "author": "Cameron Clough <cameronjclough@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0"
+  }
+}

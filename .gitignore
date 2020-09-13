@@ -1,0 +1,14 @@
+# Project files
+node_modules
+.env*
+!.env.default
+tracks/*
+!tracks/.gitkeep
+
+# Operating systems
+.DS_Store
+
+# IDEs
+.vscode
+.idea
+*.iml
