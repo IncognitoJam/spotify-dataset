@@ -32,7 +32,11 @@ const getToken = () => {
 
 const main = async () => {
   const token = await getToken()
+  axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
   console.log('Token:', token)
+
+  const { data } = await axios.get('https://api.spotify.com/v1/tracks/2TpxZ7JUBn3uw46aR7qd6V')
+  console.log(data)
 }
 
 main();
