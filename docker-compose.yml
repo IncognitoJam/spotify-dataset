@@ -1,0 +1,17 @@
+version: "2.4"
+services:
+  tensorflow:
+    image: rocm/tensorflow:latest
+    network_mode: host
+    devices:
+      - "/dev/kfd:/dev/kfd"
+      - "/dev/dri:/dev/dri"
+    group_add:
+      - video
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ./tf_docker_share:/tf_docker_share
+    working_dir: /tf_docker_share
